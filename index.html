@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meyvizhi - Inclusive Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to main content for screen readers -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar" role="toolbar" aria-label="Accessibility options">
+        <button id="high-contrast-toggle" aria-label="Toggle high contrast mode" title="High Contrast">
+            <span aria-hidden="true">🎨</span>
+        </button>
+        <button id="dyslexia-toggle" aria-label="Toggle dyslexia-friendly font" title="Dyslexia Font">
+            <span aria-hidden="true">Aa</span>
+        </button>
+        <button id="text-size-increase" aria-label="Increase text size" title="Increase Text Size">
+            <span aria-hidden="true">A+</span>
+        </button>
+        <button id="text-size-decrease" aria-label="Decrease text size" title="Decrease Text Size">
+            <span aria-hidden="true">A-</span>
+        </button>
+        <button id="read-aloud-toggle" aria-label="Toggle text-to-speech" title="Read Aloud">
+            <span aria-hidden="true">🔊</span>
+        </button>
+        <button id="sign-language-toggle" aria-label="Toggle sign language interpreter" title="Sign Language">
+            <span aria-hidden="true">🤟</span>
+        </button>
+        <button id="braille-mode-toggle" aria-label="Toggle braille display mode" title="Braille Mode">
+            <span aria-hidden="true">⠃</span>
+        </button>
+        
+        <!-- Language Selector -->
+        <select id="language-select" aria-label="Select language">
+            <option value="en">English</option>
+            <option value="ta">தமிழ் (Tamil)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="kn">ಕನ್ನಡ (Kannada)</option>
+            <option value="te">తెలుగు (Telugu)</option>
+            <option value="ml">മലയാളം (Malayalam)</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="pt">Português</option>
+        </select>
+    </div>
+
+    <!-- Sign Language Video Interpreter (hidden by default) -->
+    <div id="sign-language-interpreter" class="sign-interpreter" role="complementary" aria-label="Sign language interpreter">
+        <div class="interpreter-video">
+            <p>Sign language interpretation will appear here</p>
+            <button id="close-sign-interpreter" aria-label="Close sign language interpreter">×</button>
+        </div>
+    </div>
+
+    <!-- Braille Display Info -->
+    <div id="braille-display" class="braille-mode" role="status" aria-live="polite">
+        <p class="braille-text"></p>
+    </div>
+
+    <!-- Left Sidebar Navigation -->
+    <nav class="sidebar-nav" role="navigation" aria-label="Main navigation">
+        <div class="sidebar-header">
+            <h1 class="sidebar-name" data-lang="name">Meyvizhi</h1>
+            <p class="sidebar-role" data-lang="role">PhD Researcher in Spatial Statistics & Health Inequalities</p>
+        </div>
+        <ul class="sidebar-nav-list">
+            <li><a href="#home" data-nav="home" aria-label="Navigate to home section">Home</a></li>
+            <li><a href="#research-papers" data-nav="research" aria-label="Navigate to research papers">Research Papers</a></li>
+            <li><a href="#teaching" data-nav="teaching" aria-label="Navigate to teaching section">Teaching</a></li>
+            <li><a href="#academic-resources" data-nav="academic" aria-label="Navigate to academic resources">Academic Resources</a></li>
+            <li><a href="#writing-resources" data-nav="writing" aria-label="Navigate to writing resources">Writing Resources</a></li>
+            <li><a href="#design-resources" data-nav="design-res" aria-label="Navigate to design resources">Design Resources</a></li>
+            <li><a href="#design-portfolio" data-nav="portfolio" aria-label="Navigate to design portfolio">Design Portfolio</a></li>
+            <li><a href="#pop-culture" data-nav="pop" aria-label="Navigate to pop culture section">Pop Culture</a></li>
+            <li><a href="#foodie" data-nav="foodie" aria-label="Navigate to foodie section">Foodie Corner</a></li>
+            <li><a href="#collaborations" data-nav="collab" aria-label="Navigate to collaborations">Academic Collabs</a></li>
+            <li><a href="#cv" data-nav="cv" aria-label="Navigate to CV section">Fancy Schmancy CV</a></li>
+            <li><a href="#need-help" data-nav="help" aria-label="Navigate to help section" class="help-link">Need Help?</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <main id="main-content" role="main">
+        <!-- Home Section -->
+        <section id="home" class="content-section active" aria-labelledby="home-heading">
+            <h2 id="home-heading" data-lang="home-title">Welcome</h2>
+            <div class="intro-content">
+                <img src="photo.jpg" alt="Profile picture of Meyvizhi" class="profile-photo">
+                <div class="bio">
+                    <p data-lang="bio-1">
+                        Hello! I'm <strong>Meyvizhi</strong> - a 1st-year PhD candidate in the School of Mathematics and Statistics at the University of Glasgow. 
+                        I am jointly supervised by Dr. Craig Anderson, Dr. Vanessa McNealis, and Dr. Daniela Castro-Camilo.
+                    </p>
+                    <p data-lang="bio-2">
+                        With a focus on disease risk mapping, I am working on spatial models to help answer important questions on health outcome inequalities. 
+                        With previous experience in infectious disease modelling, I now work on chronic diseases risks.
+                    </p>
+                    <p data-lang="bio-3">
+                        My academic background includes a Bachelors in Statistics and Mathematics, which allowed me to explore both theory and applications.
+                    </p>
+                    <p data-lang="bio-4">
+                        Passionate about science outreach, I also help coordinate talks and workshops as a co-organizer of the R-Ladies Bangalore chapter. 
+                        Caricature-ising technical research into digestible cartoons is another way I attempt to engage with science outreach.
+                    </p>
+                    <p data-lang="bio-5">
+                        I am always open to hearing about cool science, books (A Man Called Ove is a good read) and food recommendations (Masala Dosas)!
+                    </p>
+                    <p class="contact-info">
+                        <a href="/cdn-cgi/l/email-protection#655655545c555153162516111001000b114b0209044b04064b100e" aria-label="Send email to Meyvizhi"><span class="__cf_email__" data-cfemail="f8cbc8c9c1c8ccce8bb88b8c8d9c9d968cd69f9499d6999bd68d93">[email&#160;protected]</span></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Papers Section -->
+        <section id="research-papers" class="content-section" aria-labelledby="research-heading">
+            <h2 id="research-heading" data-lang="research-title">Research Papers</h2>
+            <div class="papers-container">
+                <p class="coming-soon" data-lang="coming-soon">Exciting research coming soon! Check back for updates on spatial statistics and health inequality studies.</p>
+                <!-- Papers will be added here -->
+            </div>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="content-section" aria-labelledby="teaching-heading">
+            <h2 id="teaching-heading" data-lang="teaching-title">Teaching</h2>
+            <div class="teaching-content">
+                <p data-lang="teaching-intro">Information about courses, tutorials, and teaching materials will be available here.</p>
+            </div>
+        </section>
+
+        <!-- Academic Resources Section -->
+        <section id="academic-resources" class="content-section" aria-labelledby="academic-resources-heading">
+            <h2 id="academic-resources-heading" data-lang="academic-resources-title">Academic Resources</h2>
+            <div class="resources-grid">
+                <p data-lang="academic-resources-intro">Curated academic resources, research tools, and scholarly materials coming soon.</p>
+            </div>
+        </section>
+
+        <!-- Writing Resources Section -->
+        <section id="writing-resources" class="content-section" aria-labelledby="writing-resources-heading">
+            <h2 id="writing-resources-heading" data-lang="writing-resources-title">Writing Resources</h2>
+            <div class="resources-grid">
+                <p data-lang="writing-resources-intro">Helpful guides for academic writing, research communication, and storytelling.</p>
+            </div>
+        </section>
+
+        <!-- Design Resources Section -->
+        <section id="design-resources" class="content-section" aria-labelledby="design-resources-heading">
+            <h2 id="design-resources-heading" data-lang="design-resources-title">Design Resources</h2>
+            <div class="resources-grid">
+                <p data-lang="design-resources-intro">Design tools, visualization guides, and creative resources for researchers.</p>
+            </div>
+        </section>
+
+        <!-- Design Portfolio Section -->
+        <section id="design-portfolio" class="content-section" aria-labelledby="portfolio-heading">
+            <h2 id="portfolio-heading" data-lang="portfolio-title">Design Portfolio</h2>
+            <div class="portfolio-grid">
+                <p data-lang="portfolio-intro">Science communication cartoons, infographics, and visual storytelling projects.</p>
+            </div>
+        </section>
+
+        <!-- Pop Culture Section -->
+        <section id="pop-culture" class="content-section" aria-labelledby="pop-culture-heading">
+            <h2 id="pop-culture-heading" data-lang="pop-culture-title">Pop Culture Corner</h2>
+            <div class="pop-culture-content">
+                <p data-lang="pop-culture-intro">Book recommendations, cultural insights, and things I'm currently enjoying!</p>
+                <div class="recommendations">
+                    <h3 data-lang="books-title">Current Reads</h3>
+                    <ul>
+                        <li><em>A Man Called Ove</em> by Fredrik Backman</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foodie Section -->
+        <section id="foodie" class="content-section" aria-labelledby="foodie-heading">
+            <h2 id="foodie-heading" data-lang="foodie-title">Foodie Corner</h2>
+            <div class="foodie-content">
+                <p data-lang="foodie-intro">Food recommendations, favorite spots, and culinary adventures!</p>
+                <div class="recommendations">
+                    <h3 data-lang="fave-food-title">Must-Try</h3>
+                    <ul>
+                        <li><a href="https://centraltiffinroom.com/" target="_blank" rel="noopener" aria-label="Visit Central Tiffin Room website">Masala Dosas at Central Tiffin Room</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Collaborations Section -->
+        <section id="collaborations" class="content-section" aria-labelledby="collab-heading">
+            <h2 id="collab-heading" data-lang="collab-title">Academic Collaborations</h2>
+            <div class="collab-content">
+                <p data-lang="collab-intro">Interested in collaborating? Let's work together on spatial statistics, health equity research, or science communication!</p>
+                <div class="collab-areas">
+                    <h3 data-lang="collab-areas-title">Collaboration Areas</h3>
+                    <ul>
+                        <li>Spatial disease risk mapping</li>
+                        <li>Health inequalities research</li>
+                        <li>Science communication & outreach</li>
+                        <li>R programming & statistical modeling</li>
+                        <li>Data visualization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CV Section -->
+        <section id="cv" class="content-section" aria-labelledby="cv-heading">
+            <h2 id="cv-heading" data-lang="cv-title">Curriculum Vitae</h2>
+            <div class="cv-content">
+                <div class="cv-download">
+                    <a href="Meyvizhi_CV_Oct_25.pdf" download class="download-btn" aria-label="Download CV as PDF">
+                        <span aria-hidden="true">📄</span> Download CV
+                    </a>
+                </div>
+                
+                <div class="cv-sections">
+                    <section class="cv-section">
+                        <h3 data-lang="education-title">Education</h3>
+                        <div class="cv-item">
+                            <h4>PhD in Statistics</h4>
+                            <p class="institution">University of Glasgow, School of Mathematics and Statistics</p>
+                            <p class="duration">2024 - Present</p>
+                            <p>Focus: Spatial models for disease risk mapping and health outcome inequalities</p>
+                        </div>
+                        <div class="cv-item">
+                            <h4>Bachelors in Statistics and Mathematics</h4>
+                            <p class="duration">Previous academic experience</p>
+                        </div>
+                    </section>
+
+                    <section class="cv-section">
+                        <h3 data-lang="research-interests-title">Research Interests</h3>
+                        <ul>
+                            <li>Spatial Statistics</li>
+                            <li>Disease Risk Mapping</li>
+                            <li>Health Inequalities</li>
+                            <li>Chronic Disease Epidemiology</li>
+                            <li>Statistical Modeling</li>
+                        </ul>
+                    </section>
+
+                    <section class="cv-section">
+                        <h3 data-lang="outreach-title">Science Outreach</h3>
+                        <div class="cv-item">
+                            <h4>Co-organizer, R-Ladies Bangalore</h4>
+                            <p>Coordinating talks and workshops to promote R programming and data science</p>
+                        </div>
+                        <div class="cv-item">
+                            <h4>Science Communication Through Art</h4>
+                            <p>Creating caricatures and cartoons to make technical research accessible</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Need Help Section -->
+        <section id="need-help" class="content-section help-section" aria-labelledby="help-heading">
+            <h2 id="help-heading" data-lang="help-title">Need Help?</h2>
+            <div class="help-content">
+                <p data-lang="help-intro">This website is designed to be as accessible as possible. If you're experiencing any difficulties, here are some resources:</p>
+                
+                <div class="help-grid">
+                    <div class="help-card">
+                        <h3 data-lang="accessibility-features-title">Accessibility Features</h3>
+                        <ul>
+                            <li>🎨 High contrast mode for better visibility</li>
+                            <li>Aa Dyslexia-friendly font option</li>
+                            <li>A+ / A- Adjustable text size</li>
+                            <li>🔊 Text-to-speech reader</li>
+                            <li>🤟 Sign language interpretation support</li>
+                            <li>⠃ Braille display mode</li>
+                            <li>🌐 Multiple language options</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-card">
+                        <h3 data-lang="keyboard-nav-title">Keyboard Navigation</h3>
+                        <ul>
+                            <li><kbd>Tab</kbd> - Move forward through links and buttons</li>
+                            <li><kbd>Shift + Tab</kbd> - Move backward</li>
+                            <li><kbd>Enter</kbd> - Activate links and buttons</li>
+                            <li><kbd>Esc</kbd> - Close modals and overlays</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-card">
+                        <h3 data-lang="screen-readers-title">Screen Readers</h3>
+                        <p>This site is optimized for:</p>
+                        <ul>
+                            <li>JAWS</li>
+                            <li>NVDA</li>
+                            <li>VoiceOver (macOS/iOS)</li>
+                            <li>TalkBack (Android)</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-card">
+                        <h3 data-lang="contact-help-title">Still Need Help?</h3>
+                        <p data-lang="contact-help-text">Please reach out if you encounter any accessibility barriers:</p>
+                        <p><a href="/cdn-cgi/l/email-protection#fdcecdccc4cdc9cb8ebd8e898899989389d39a919cd39c9ed38896" aria-label="Email for accessibility help"><span class="__cf_email__" data-cfemail="90a3a0a1a9a0a4a6e3d0e3e4e5f4f5fee4bef7fcf1bef1f3bee5fb">[email&#160;protected]</span></a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <p>&copy; 2025 Meyvizhi</p>
+            <p>
+                
